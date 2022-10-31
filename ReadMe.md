@@ -23,15 +23,15 @@
 - Perform Dimension Modelling and create Dimensions and Fact table.
 - Use Clickhouse for OLAP as its free
 
-![Data Pipeline](Data_Pipeline.png)
+![Data Pipeline](./Data_Pipeline.png)
 
 
 ### Tasks
 
 - [ ] Write Technical Requirement Document for Kaggle API and its extraction of data - Source Data
-- [ ] Setup Airflow Docker Compose on Local Machine. - Workflow Scheduler
-- [ ] Setup ClickHouse Docker - Data Warehouse
-- [ ] Setup  MinIO Docker - Data Lake
+- [x] Setup Airflow Docker Compose on Local Machine. - Workflow Scheduler
+- [x] Setup ClickHouse Docker - Data Warehouse
+- [x] Setup MinIO Docker - Data Lake
 - [ ] Extract Data from Kaggle API and dump to Data Lake
 - [ ] Transform Data from Data Lake
     - [ ] Normalize Data
