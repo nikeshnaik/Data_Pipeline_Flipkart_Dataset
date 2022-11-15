@@ -28,12 +28,11 @@ minio-init:
 	docker run -d -p 9000:9000 -p 9090:9090 --user $(id -u):$(id -g) --name data-lake \
    -e "MINIO_ROOT_USER=selfadmin" \
    -e "MINIO_ROOT_PASSWORD=selfadmin" \
-   -v ${HOME}/minio/data:/data \
+   -v ${HOME}/projects/Flipkart_Data_Analytic_Pipeline/minio/data:/data \
    quay.io/minio/minio server /data --console-address ":9090"
 
 clickhouse-init:
 	docker pull clickhouse/clickhouse-server
 	docker run -d --name data-warehouse --ulimit nofile=262144:262144 clickhouse/clickhouse-server
-
 
 data-infra-init: airflow-init minio-init clickhouse-init
